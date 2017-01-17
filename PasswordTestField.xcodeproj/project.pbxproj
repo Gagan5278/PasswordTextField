@@ -12,6 +12,8 @@
 		049CAC881E1F6BD60033F00A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049CAC861E1F6BD60033F00A /* Main.storyboard */; };
 		049CAC8A1E1F6BD60033F00A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049CAC891E1F6BD60033F00A /* Assets.xcassets */; };
 		049CAC8D1E1F6BD60033F00A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049CAC8B1E1F6BD60033F00A /* LaunchScreen.storyboard */; };
+		049CAC9B1E1F6E870033F00A /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CAC9A1E1F6E870033F00A /* PinView.swift */; };
+		049CAC9D1E1F70560033F00A /* PinField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CAC9C1E1F70560033F00A /* PinField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		049CAC891E1F6BD60033F00A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		049CAC8C1E1F6BD60033F00A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		049CAC8E1E1F6BD60033F00A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		049CAC9A1E1F6E870033F00A /* PinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
+		049CAC9C1E1F70560033F00A /* PinField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		049CAC811E1F6BD60033F00A /* PasswordTestField */ = {
 			isa = PBXGroup;
 			children = (
+				049CAC941E1F6CF40033F00A /* GVTextField */,
 				049CAC821E1F6BD60033F00A /* AppDelegate.swift */,
 				049CAC841E1F6BD60033F00A /* ViewController.swift */,
 				049CAC861E1F6BD60033F00A /* Main.storyboard */,
@@ -62,6 +67,31 @@
 				049CAC8E1E1F6BD60033F00A /* Info.plist */,
 			);
 			path = PasswordTestField;
+			sourceTree = "<group>";
+		};
+		049CAC941E1F6CF40033F00A /* GVTextField */ = {
+			isa = PBXGroup;
+			children = (
+				049CAC991E1F6E610033F00A /* PinView */,
+				049CAC981E1F6E540033F00A /* PinField */,
+			);
+			path = GVTextField;
+			sourceTree = "<group>";
+		};
+		049CAC981E1F6E540033F00A /* PinField */ = {
+			isa = PBXGroup;
+			children = (
+				049CAC9C1E1F70560033F00A /* PinField.swift */,
+			);
+			path = PinField;
+			sourceTree = "<group>";
+		};
+		049CAC991E1F6E610033F00A /* PinView */ = {
+			isa = PBXGroup;
+			children = (
+				049CAC9A1E1F6E870033F00A /* PinView.swift */,
+			);
+			path = PinView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049CAC9D1E1F70560033F00A /* PinField.swift in Sources */,
 				049CAC851E1F6BD60033F00A /* ViewController.swift in Sources */,
+				049CAC9B1E1F6E870033F00A /* PinView.swift in Sources */,
 				049CAC831E1F6BD60033F00A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +331,7 @@
 				049CAC931E1F6BD60033F00A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
