@@ -27,13 +27,21 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scs-0V-aeb">
+                                <rect key="frame" x="133" y="348" width="148" height="35"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="zMG-Mg-ejV" firstAttribute="top" secondItem="scs-0V-aeb" secondAttribute="bottom" constant="20" id="7Zt-7n-Aq6"/>
                             <constraint firstItem="zMG-Mg-ejV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BOy-C7-V9I"/>
                             <constraint firstItem="zMG-Mg-ejV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="IBk-OC-AuJ"/>
                             <constraint firstItem="zMG-Mg-ejV" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="PCZ-j0-eec"/>
                             <constraint firstItem="zMG-Mg-ejV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VXF-gx-941"/>
+                            <constraint firstItem="scs-0V-aeb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zi2-P7-Gqa"/>
                         </constraints>
                     </view>
                     <connections>
