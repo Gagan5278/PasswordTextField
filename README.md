@@ -1,5 +1,9 @@
 # PasswordTestField
-Pin Entry TextField Example in SWIFT 3.0
+Pin Entry TextField Example in SWIFT 3.0 and updated to Swit 5.0
+
+
+![Simulator Screen Shot - iPhone 11 Pro - 2020-03-17 at 17 01 34](https://user-images.githubusercontent.com/2304583/76869467-0a341500-6871-11ea-9147-1dd02692b3fb.png)
+
 
 
 App written in *SWIFT* language. Demo app can be useful for password …
