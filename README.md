@@ -1,5 +1,5 @@
 # PasswordTestField
-Pin Entry TextField Example in SWIFT 3.0 and updated to Swit 5.0
+Pin Entry TextField example written in SWIFT 3.0 and updated to Swit 5.0
 
 
 ![Simulator Screen Shot - iPhone 11 Pro - 2020-03-17 at 17 01 34](https://user-images.githubusercontent.com/2304583/76869467-0a341500-6871-11ea-9147-1dd02692b3fb.png)
@@ -15,12 +15,37 @@ authentication.
 
 WORKING:
 
-Just add GVTextField folder’s files in your project & paste below code
-in yourViewController
 
- let pinView  = PinView(frame : CGRect(x: 0, y: 150, width:
-UIScreen.main.bounds.size.width, height: 100))
-        self.view.addSubview(pinView)
+Open Main.Storyboard and add a UIStackView and make it as subclass of PinContainerStackView. Set added UIStackView layout. And Done.
 
-Please note that number of fields can be managed via
-‘numberOfTextFields’ constant variable in your viewController.
+For reading entered OTP in your view controller add delegate to self and register for RegisterSecondaryDevice delegate.
+
+e.g
+
+    @IBOutlet weak var pinFileldsContainerView: PinContainerStackView!
+    
+    //MARK:- View Controller life cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //
+        pinFileldsContainerView.registerDelegate = self
+    }
+    
+    
+For Delegate
+
+//MARK: RegisterSecondaryDevice Delegate
+extension ViewController: RegisterSecondaryDevice {
+    func registerSecondaryDevice(with token: String) {
+           /*
+          send to server or process locally
+        */
+          print("token is :\(token)")
+    }
+}
+
+
+
+
+
+
