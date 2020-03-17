@@ -12,8 +12,9 @@
 		049CAC881E1F6BD60033F00A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049CAC861E1F6BD60033F00A /* Main.storyboard */; };
 		049CAC8A1E1F6BD60033F00A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049CAC891E1F6BD60033F00A /* Assets.xcassets */; };
 		049CAC8D1E1F6BD60033F00A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049CAC8B1E1F6BD60033F00A /* LaunchScreen.storyboard */; };
-		049CAC9B1E1F6E870033F00A /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CAC9A1E1F6E870033F00A /* PinView.swift */; };
-		049CAC9D1E1F70560033F00A /* PinField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CAC9C1E1F70560033F00A /* PinField.swift */; };
+		21E5BF7A24211A33002F939B /* OTPContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E5BF7924211A33002F939B /* OTPContainerView.swift */; };
+		21E5BF7C24211A40002F939B /* OTPTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E5BF7B24211A40002F939B /* OTPTextfield.swift */; };
+		21E5BF7F24211C45002F939B /* UITextfield+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E5BF7E24211C45002F939B /* UITextfield+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +25,9 @@
 		049CAC891E1F6BD60033F00A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		049CAC8C1E1F6BD60033F00A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		049CAC8E1E1F6BD60033F00A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		049CAC9A1E1F6E870033F00A /* PinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
-		049CAC9C1E1F70560033F00A /* PinField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinField.swift; sourceTree = "<group>"; };
+		21E5BF7924211A33002F939B /* OTPContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPContainerView.swift; sourceTree = "<group>"; };
+		21E5BF7B24211A40002F939B /* OTPTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPTextfield.swift; sourceTree = "<group>"; };
+		21E5BF7E24211C45002F939B /* UITextfield+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		049CAC811E1F6BD60033F00A /* PasswordTestField */ = {
 			isa = PBXGroup;
 			children = (
+				21E5BF7D24211C37002F939B /* Extension */,
 				049CAC941E1F6CF40033F00A /* GVTextField */,
 				049CAC821E1F6BD60033F00A /* AppDelegate.swift */,
 				049CAC841E1F6BD60033F00A /* ViewController.swift */,
@@ -81,7 +84,7 @@
 		049CAC981E1F6E540033F00A /* PinField */ = {
 			isa = PBXGroup;
 			children = (
-				049CAC9C1E1F70560033F00A /* PinField.swift */,
+				21E5BF7B24211A40002F939B /* OTPTextfield.swift */,
 			);
 			path = PinField;
 			sourceTree = "<group>";
@@ -89,9 +92,17 @@
 		049CAC991E1F6E610033F00A /* PinView */ = {
 			isa = PBXGroup;
 			children = (
-				049CAC9A1E1F6E870033F00A /* PinView.swift */,
+				21E5BF7924211A33002F939B /* OTPContainerView.swift */,
 			);
 			path = PinView;
+			sourceTree = "<group>";
+		};
+		21E5BF7D24211C37002F939B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				21E5BF7E24211C45002F939B /* UITextfield+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,19 +132,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Gagan;
 				TargetAttributes = {
 					049CAC7E1E1F6BD50033F00A = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 6V63C69JJF;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 049CAC7A1E1F6BD50033F00A /* Build configuration list for PBXProject "PasswordTestField" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -167,9 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049CAC9D1E1F70560033F00A /* PinField.swift in Sources */,
+				21E5BF7A24211A33002F939B /* OTPContainerView.swift in Sources */,
+				21E5BF7C24211A40002F939B /* OTPTextfield.swift in Sources */,
+				21E5BF7F24211C45002F939B /* UITextfield+Extension.swift in Sources */,
 				049CAC851E1F6BD60033F00A /* ViewController.swift in Sources */,
-				049CAC9B1E1F6E870033F00A /* PinView.swift in Sources */,
 				049CAC831E1F6BD60033F00A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,20 +213,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -242,6 +264,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -250,20 +273,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -285,6 +317,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -299,7 +332,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.momentum.multiply.money;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -312,7 +345,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = za.co.momentum.multiply.money;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
