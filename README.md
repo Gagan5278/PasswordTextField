@@ -31,11 +31,8 @@ e.g
         pinFileldsContainerView.registerDelegate = self
     }
     
-    
-For Delegate
-
-//MARK: RegisterSecondaryDevice Delegate
-extension ViewController: RegisterSecondaryDevice {
+    //for delegate
+    extension ViewController: RegisterSecondaryDevice {
     func registerSecondaryDevice(with token: String) {
            /*
           send to server or process locally
